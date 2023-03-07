@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "untitled8::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-untitled8-Debug-843bc871fcf448b8bd58.json",
+					"jsonFile" : "target-untitled8-Debug-1de232bed450aa1212a7.json",
 					"name" : "untitled8",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Jaaum/CLionProjects/untitled8/cmake-build-debug",
-		"source" : "C:/Users/Jaaum/CLionProjects/untitled8"
+		"build" : "C:/Users/Jaaum/CLionProjects/stack/cmake-build-debug",
+		"source" : "C:/Users/Jaaum/CLionProjects/stack"
 	},
 	"version" : 
 	{
