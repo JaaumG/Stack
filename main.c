@@ -35,17 +35,60 @@ bool pop(pilha * topo, int * valor){
     return false;
 }
 
+void exibir(pilha * topo){
+    if(*topo!=NULL){
+        pilha aux = *topo;
+        while(aux!=NULL){
+            printf("%d ", aux->valor);
+            aux = aux->prox;
+        }
+        printf("\n");
+    }
+}
+
 int main() {
 
     int valor;
     pilha topo;
     criar(&topo);
-    if(push(&topo, 10)){
-        printf("Push na pilha ok!\n");
-    }
-    if(pop(&topo, &valor)){
-        printf("Pop na pilha ok! Valor removido: %d\n", valor);
-    }
+    int opcao;
+   do{
+        system("cls");
+        printf("Pilha:");
+        exibir(&topo);
+        printf("\n1- Inserir\n");
+        printf("2- Remover\n");
+        printf("3- Sair\n");
+        printf("Opção: ");
+        scanf("%d", &opcao);
+        switch(opcao){
+            case 1:
+                system("cls");
+                printf("Valor: ");
+                scanf("%d", &valor);
+                if(push(&topo, valor)){
+                    printf("Valor inserido com sucesso!\n");
+                } else {
+                    printf("Erro ao inserir o valor!\n");
+                }
+                break;
+            case 2:
+                system("cls");
+                if(pop(&topo, &valor)){
+                    printf("Valor removido com sucesso: %d\n", valor);
+                } else {
+                    printf("Pilha vazia!\n");
+                }
+                break;
+            case 3:
+                system("cls");
+                printf("Finalizando o programa...\n");
+                break;
+            default:
+                system("cls");
+                printf("Opção inválida!\n");
+        }
+    } while(opcao!=3);
     return 0;
 
 }
