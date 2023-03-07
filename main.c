@@ -24,13 +24,29 @@ bool push(pilha * topo, int valor){
     return false;
 }
 
-void main() {
+bool pop(pilha * topo, int * valor){
+    if(*topo!=NULL){
+        pilha aux = *topo;
+        *valor = aux->valor;
+        *topo = aux->prox;
+        free(aux);
+        return true;
+    }
+    return false;
+}
 
+int main() {
+
+    int valor;
     pilha topo;
     criar(&topo);
     if(push(&topo, 10)){
-        printf("Push na pilha ok!");
+        printf("Push na pilha ok!\n");
     }
+    if(pop(&topo, &valor)){
+        printf("Pop na pilha ok! Valor removido: %d\n", valor);
+    }
+    return 0;
 
 }
 
